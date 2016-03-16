@@ -2577,7 +2577,7 @@ function Get-CrmEntityAttributeMetadata{
     try
     {
         $result = $conn.GetEntityAttributeMetadataForAttribute($EntityLogicalName, $FieldLogicalName)
-		if($result -ne $null)
+		if($result -eq $null)
         {
             return $conn.LastCrmException
         }
